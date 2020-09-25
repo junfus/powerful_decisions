@@ -1,0 +1,81 @@
+country_decisions = {
+
+	# 成立独立团
+	country_independent_corps = {
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = independent_corps }
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			custom_tooltip = explain_country_independent_corps
+			add_country_modifier = {
+				name = "independent_corps"
+				duration = -1
+			}
+			set_country_flag = independent_corps_activated
+		}
+		ai_will_do = {
+			factor = 0 # Plays it safer with cash
+		}
+	}
+	
+	# 废除独立团
+	abolish_country_independent_corps = {
+		potential = {
+			has_country_modifier = independent_corps
+		}
+		allow = {
+			has_country_modifier = independent_corps
+		}
+		effect = {
+			remove_country_modifier = independent_corps
+			clr_country_flag = independent_corps_activated
+		}
+		ai_will_do = {
+			factor = 0 # Plays it safer with cash
+		}
+	}
+
+	# 天之历数在尔躬
+	country_make_empire_great_again = {
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = make_empire_great_again }
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			custom_tooltip = explain_country_make_empire_great_again
+			add_country_modifier = {
+				name = "make_empire_great_again"
+				duration = -1
+			}
+			set_country_flag = make_empire_great_again_activated
+		}
+		ai_will_do = {
+			factor = 0 # Plays it safer with cash
+		}
+	}
+
+	# 从此君王不早朝
+	abolish_country_make_empire_great_again = {
+		potential = {
+			has_country_modifier = make_empire_great_again
+		}
+		allow = {
+			has_country_modifier = make_empire_great_again
+		}
+		effect = {
+			remove_country_modifier = make_empire_great_again
+			clr_country_flag = make_empire_great_again_activated
+		}
+		ai_will_do = {
+			factor = 0 # Plays it safer with cash
+		}
+	}
+
+} 

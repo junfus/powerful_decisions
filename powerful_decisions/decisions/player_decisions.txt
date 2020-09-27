@@ -1,81 +1,195 @@
 country_decisions = {
 
-	# 成立独立团
-	country_independent_corps = {
-		potential = {
-			ai = no
-			NOT = { has_country_modifier = independent_corps }
-		}
-		allow = {
-			ai = no
-		}
-		effect = {
-			custom_tooltip = explain_country_independent_corps
-			add_country_modifier = {
-				name = "independent_corps"
-				duration = -1
-			}
-			set_country_flag = independent_corps_activated
-		}
-		ai_will_do = {
-			factor = 0 # Plays it safer with cash
-		}
-	}
-	
-	# 废除独立团
-	abolish_country_independent_corps = {
-		potential = {
-			has_country_modifier = independent_corps
-		}
-		allow = {
-			has_country_modifier = independent_corps
-		}
-		effect = {
-			remove_country_modifier = independent_corps
-			clr_country_flag = independent_corps_activated
-		}
-		ai_will_do = {
-			factor = 0 # Plays it safer with cash
-		}
-	}
+    # 成立独立团
+    # country_independent_corps = {
+    #     potential = {
+    #         ai = no
+    #         NOT = { has_country_modifier = independent_corps }
+    #     }
+    #     allow = {
+    #         ai = no
+    #     }
+    #     effect = {
+    #         custom_tooltip = explain_country_independent_corps
+    #         add_country_modifier = {
+    #             name = "independent_corps"
+    #             duration = -1
+    #         }
+    #         set_country_flag = independent_corps_activated
+    #     }
+    #     ai_will_do = {
+    #         factor = 0 # Plays it safer with cash
+    #     }
+    # }
+    
+    # 废除独立团
+    # abolish_country_independent_corps = {
+    #     potential = {
+    #         has_country_modifier = independent_corps
+    #     }
+    #     allow = {
+    #         has_country_modifier = independent_corps
+    #     }
+    #     effect = {
+    #         remove_country_modifier = independent_corps
+    #         clr_country_flag = independent_corps_activated
+    #     }
+    #     ai_will_do = {
+    #         factor = 0 # Plays it safer with cash
+    #     }
+    # }
 
-	# 天之历数在尔躬
-	country_make_empire_great_again = {
-		potential = {
-			ai = no
-			NOT = { has_country_modifier = make_empire_great_again }
-		}
-		allow = {
-			ai = no
-		}
-		effect = {
-			custom_tooltip = explain_country_make_empire_great_again
-			add_country_modifier = {
-				name = "make_empire_great_again"
-				duration = -1
-			}
-			set_country_flag = make_empire_great_again_activated
-		}
-		ai_will_do = {
-			factor = 0 # Plays it safer with cash
-		}
-	}
+    # 天之历数在尔躬
+    country_make_empire_great_again = {
+        potential = {
+            ai = no
+            NOT = { has_country_modifier = make_empire_great_again }
+        }
+        allow = {
+            ai = no
+        }
+        effect = {
+            custom_tooltip = explain_country_make_empire_great_again
+            add_country_modifier = {
+                name = "make_empire_great_again"
+                duration = -1
+            }
+            set_country_flag = make_empire_great_again_activated
+        }
+        ai_will_do = {
+            factor = 0 # Plays it safer with cash
+        }
+    }
 
-	# 从此君王不早朝
-	abolish_country_make_empire_great_again = {
-		potential = {
-			has_country_modifier = make_empire_great_again
-		}
-		allow = {
-			has_country_modifier = make_empire_great_again
-		}
-		effect = {
-			remove_country_modifier = make_empire_great_again
-			clr_country_flag = make_empire_great_again_activated
-		}
-		ai_will_do = {
-			factor = 0 # Plays it safer with cash
-		}
-	}
+    # 从此君王不早朝
+    abolish_country_make_empire_great_again = {
+        potential = {
+            has_country_modifier = make_empire_great_again
+        }
+        allow = {
+            has_country_modifier = make_empire_great_again
+        }
+        effect = {
+            remove_country_modifier = make_empire_great_again
+            clr_country_flag = make_empire_great_again_activated
+        }
+        ai_will_do = {
+            factor = 0 # Plays it safer with cash
+        }
+    }
+
+    # 成立黄埔军校
+    country_whampoa_military_academy = {
+        potential = {
+            ai = no
+            NOT = { has_country_modifier = whampoa_military_academy }
+        }
+        allow = {
+            ai = no
+        }
+        effect = {
+            add_country_modifier = {
+                name = "whampoa_military_academy"
+                duration = -1
+            }
+            set_country_flag = whampoa_military_academy_activated
+        }
+        ai_will_do = {
+            factor = 0 # Plays it safer with cash
+        }
+    }
+    
+    # 废除黄埔军校
+    abolish_country_whampoa_military_academy = {
+        potential = {
+            has_country_modifier = whampoa_military_academy
+        }
+        allow = {
+            has_country_modifier = whampoa_military_academy
+        }
+        effect = {
+            remove_country_modifier = whampoa_military_academy
+            clr_country_flag = whampoa_military_academy_activated
+        }
+        ai_will_do = {
+            factor = 0 # Plays it safer with cash
+        }
+    }
+
+    # 开启基建狂魔
+    country_infrastructure_freak = {
+        potential = {
+            ai = no
+            NOT = { has_country_modifier = infrastructure_freak }
+        }
+        allow = {
+            ai = no
+        }
+        effect = {
+            add_country_modifier = {
+                name = "infrastructure_freak"
+                duration = -1
+            }
+            set_country_flag = infrastructure_freak_activated
+        }
+        ai_will_do = {
+            factor = 0 # Plays it safer with cash
+        }
+    }
+
+    # 关闭基建狂魔
+    abolish_country_infrastructure_freak = {
+        potential = {
+            has_country_modifier = infrastructure_freak
+        }
+        allow = {
+            has_country_modifier = infrastructure_freak
+        }
+        effect = {
+            remove_country_modifier = infrastructure_freak
+            clr_country_flag = infrastructure_freak_activated
+        }
+        ai_will_do = {
+            factor = 0 # Plays it safer with cash
+        }
+    }
+
+    # 学习胡服骑射
+    # country_horse_warfare_in_national = {
+    #     potential = {
+    #         ai = no
+    #         NOT = { has_country_modifier = horse_warfare_in_national }
+    #     }
+    #     allow = {
+    #         ai = no
+    #     }
+    #     effect = {
+    #         add_country_modifier = {
+    #             name = "horse_warfare_in_national"
+    #             duration = -1
+    #         }
+    #         set_country_flag = horse_warfare_in_national_activated
+    #     }
+    #     ai_will_do = {
+    #         factor = 0 # Plays it safer with cash
+    #     }
+    # }
+
+    # 废除胡服骑射
+    # abolish_country_horse_warfare_in_national = {
+    #     potential = {
+    #         has_country_modifier = horse_warfare_in_national
+    #     }
+    #     allow = {
+    #         has_country_modifier = horse_warfare_in_national
+    #     }
+    #     effect = {
+    #         remove_country_modifier = horse_warfare_in_national
+    #         clr_country_flag = horse_warfare_in_national_activated
+    #     }
+    #     ai_will_do = {
+    #         factor = 0 # Plays it safer with cash
+    #     }
+    # }
 
 } 

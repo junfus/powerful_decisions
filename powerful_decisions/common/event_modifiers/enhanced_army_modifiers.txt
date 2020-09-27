@@ -1,19 +1,38 @@
-# see https://www.eu4cn.com/wiki/%E4%BF%AE%E6%AD%A3%E5%88%97%E8%A1%A8 for more modifiers' info.
-
 # 独立团
-independent_corps = {
-	army_tradition_decay = -0.04
-	yearly_army_professionalism = 0.002
-	drill_gain_modifier = 1
-	discipline = 0.1
-	land_morale = 0.1
-	movement_speed = 0.25
-	free_leader_pool = 1
-}
+# independent_corps = {
+#     army_tradition_decay = -0.04
+#     yearly_army_professionalism = 0.002
+#     drill_gain_modifier = 1
+#     discipline = 0.1
+#     land_morale = 0.1
+#     movement_speed = 0.25
+#     free_leader_pool = 1
+# }
 
 # 励精图治
 make_empire_great_again = {
-	country_admin_power = 3
-	country_diplomatic_power = 3
-	country_military_power = 3
+    all_power_cost = -0.2
+    yearly_corruption = -0.2
 }
+
+# 黄埔军校
+whampoa_military_academy = {
+    discipline = 0.1
+    drill_gain_modifier = 0.5
+    army_tradition_decay = -0.045
+    leader_land_fire = 1
+    leader_land_manuever = 1
+    leader_land_shock = 1
+    free_leader_pool = 1
+}
+
+# 基建狂魔
+infrastructure_freak = {
+    build_cost = -0.5
+    build_time = -0.5
+}
+
+# 胡服骑射
+# horse_warfare_in_national = {
+#     
+# }
